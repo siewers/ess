@@ -51,7 +51,7 @@
             "defaultValue": "xxxx",
             "type": "string",
             "metadata": {
-                "description": "The domain where the emails are sent from."
+                "description": "The domain where the emails are sent from ([mxDomainName].mail.protection.outlook.com)."
             }
         },
         "azureStorageAccount": {
