@@ -34,21 +34,18 @@
             }
         },
         "office365ApplicationId": {
-            "defaultValue": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "type": "string",
             "metadata": {
-                "description": "The Office 365 Application ID."
+                "description": "The Office 365 Application ID (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)."
             }
         },
         "office365DomainName": {
-            "defaultValue": "",
             "type": "string",
             "metadata": {
                 "description": "The name used when registring you Office 365 account ([office365domainname].onmicrosoft.com)."                
             }
         },
         "mxDomainName": {
-            "defaultValue": "xxxx",
             "type": "string",
             "metadata": {
                 "description": "The domain where the emails are sent from ([mxDomainName].mail.protection.outlook.com)."
@@ -62,7 +59,7 @@
             }
         },
         "azureStorageEmailSignaturesContainerName": {
-            "defaultValue": "templafyemailsignature",
+            "defaultValue": "templafyemailsignatures",
             "type": "string",
             "metadata": {
                 "description": "The Blob storage container name. Default templafyemailsignature."
@@ -166,9 +163,9 @@
                         "name": "templafy-secret",
                         "secret": {
                             "azureAppRegistrationCertificate.pfx": "[parameters('azureAppRegistrationBase64Certificate')]",
-                            "azureAppRegistrationCertificatePassword": "[parameters('azureAppRegistrationCertificatePassword')]",
+                            "azureAppRegistrationCertificatePassword": "[base64(parameters('azureAppRegistrationCertificatePassword'))]",
                             "smtpTlsCertificate.pfx": "[parameters('smtpTlsBase64Certificate')]",
-                            "smtpTlsCertificatePassword": "[parameters('smtpTlsCertificatePassword')]"
+                            "smtpTlsCertificatePassword": "[base64(parameters('smtpTlsCertificatePassword'))]"
                         }
                     }
                 ],
