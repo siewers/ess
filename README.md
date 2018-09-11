@@ -1,6 +1,6 @@
 ### Templafy Email Signature Server
 
-<a href="https://azuredeploy.net/?repository=https://github.com/siewers/ess" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsiewers%2Fess%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
