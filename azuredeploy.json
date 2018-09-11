@@ -67,13 +67,33 @@
             "metadata": {
                 "description": "The Blob storage container name. Default templafyemailsignature."
             }
+        },
+        "azureAppRegistrationBase64Certificate": {
+            "type": "string",
+            "metadata": {
+                "description": "The Azure App Registration certificate."
+            }
+        },
+        "azureAppRegistrationCertificatePassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "The Azure App Registration certificate password."
+            }
+        },
+        "smtpTlsBase64Certificate": {
+            "type": "string",
+            "metadata": {
+                "description": "The SMTP TLS certificate."
+            }
+        },
+        "smtpTlsCertificatePassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "The SMTP TLS certificate password."
+            }
         }
     },
-    "variables": {
-        "azureAppRegistrationCertificate": "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",
-        "azureAppRegistrationCertificatePassword": "VGVtcGxhZnkwMQ==",
-        "smtpTlsCertificate": "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",
-        "smtpTlsCertificatePassword": "VGVtcGxhZnkwMQ==",
+    "variables": {        
         "location": "[resourceGroup().location]",
         "osType": "Linux",
         "restartPolicy": "always",
@@ -145,10 +165,10 @@
                     {
                         "name": "templafy-secret",
                         "secret": {
-                            "azureAppRegistrationCertificate.pfx": "[variables('azureAppRegistrationCertificate')]",
-                            "azureAppRegistrationCertificatePassword": "[variables('azureAppRegistrationCertificatePassword')]",
-                            "smtpTlsCertificate.pfx": "[variables('smtpTlsCertificate')]",
-                            "smtpTlsCertificatePassword": "[variables('smtpTlsCertificatePassword')]"
+                            "azureAppRegistrationCertificate.pfx": "[parameters('azureAppRegistrationBase64Certificate')]",
+                            "azureAppRegistrationCertificatePassword": "[parameters('azureAppRegistrationCertificatePassword')]",
+                            "smtpTlsCertificate.pfx": "[parameters('smtpTlsBase64Certificate')]",
+                            "smtpTlsCertificatePassword": "[parameters('smtpTlsCertificatePassword')]"
                         }
                     }
                 ],
